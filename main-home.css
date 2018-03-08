@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* Basic, includes light colour background lol not the main one */
+
+/* rule lets you configure the viewport through which the document is viewed */
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body {
+		-ms-overflow-style: scrollbar;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+	}
+
+	body {
+		background: #F0F0F0;
+	}
+
+
+/* Type, includes text colour on background, as well as the different screensizes  */
+
+	body, input, select, textarea {
+		color: #211e1e;
+		font-family: "Avenir";
+		font-size: 18pt;
+		font-weight: 300;
+		line-height: 1.85;
+	}
+		@media screen and (max-width: 1680px) {
+
+			body, input, select, textarea {
+				font-size: 11pt;
+			}
+		}
+
+
+	strong, b {
+		color: #337AB7;
+		font-weight: 600;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p {
+		margin: 0 0 2em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #7dd8d4;
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 0 0 1em 0;
+	}
+
+	/* to allign text */
+
+	.inner {
+		max-width: 75em;
+		margin: 0 auto;
+	}
+
+		@media screen and (max-width: 1280px) {
+
+			.inner {
+				max-width: 90%;
+			}
+
+		}
+		
+		/* Aligning ID photos of team */
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+/* making blocks using flex, framing the bottom   */
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+		
+
+/* the box which contains */
+
+	.box {
+		margin-bottom: 2em;
+		padding: 1.5em;
+	}
+
+		.box.person {
+			border: 0px ;
+			padding: 3em 1.5em;
+		}
+
+			.box.person .image {
+				margin-bottom: 1em;
+			}
+
+			/* to put the images into the box */
+				.box.person .image img {
+					max-width: 100%;
+				}
+
+
+/* making the images circular  */
+
+		.image.round img {
+			border-radius: 100%;
+		}
+
+
+/* Header and Nav bar*/
+
+		#header a {
+			display: inline-block;
+			padding: 0.15em;
+			font-size: 0.8em;
+		}
+
+/* Banner for all pages */
+
+	#banner {
+		background-image: url('../../images/banner.jpg');
+ 		background-size: contain;
+		text-align: center;
+	}
+
+	/* Banner for all pages, line height and margin are between main thingy and subtitle */
+
+	#banner h1 {
+			font-size: 5.0em;
+			color: #fff;
+			line-height: 0.5em;
+			margin: 0.5em;
+		}
+
+		#banner p {
+			font-size: 1.2em;
+			color: #fff;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#banner {
+				padding: 10em 2em 8em 2em;
+			}
+
+
+		}
